@@ -1,0 +1,30 @@
+name: Check ISS Position
+
+on:
+  schedule:
+    # Cấu hình chạy mỗi 5 phút.
+    - cron: '*/2 * * * *'
+  # Cho phép bạn bấm nút chạy thủ công để test
+  workflow_dispatch:
+
+jobs:
+  check-iss:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install requests
+
+      - name: Run ISS Tracker script
+        env:
+          SENDER_EMAIL: ${{ secrets.MY_EMAIL }}
+          SENDER_PASSWORD: ${{ secrets.MY_PASSWORD }}
+        run: python main.py
