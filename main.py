@@ -74,4 +74,6 @@ if is_dark() and is_overhead():
     finally:
         # Ngắt kết nối
         server.quit()
+else:
+    print("not overhead")
 
