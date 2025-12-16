@@ -14,11 +14,11 @@ SENDER_PASSWORD = os.environ.get("MY_PASSWORD")
 RECEIVER_EMAIL = "nguyenlevuong027@gmail.com"
 
 
-message = f"""Subject: Hãy nhìn lên bầu trời, có một vì tinh tú tên ISS
+message = f"""Subject: Look the sky
 From: {SENDER_EMAIL}
 To: {RECEIVER_EMAIL}
 
-Như tiêu đề.
+
 """
 
 
