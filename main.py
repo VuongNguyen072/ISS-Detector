@@ -13,8 +13,6 @@ SENDER_EMAIL = os.environ.get("MY_EMAIL")
 SENDER_PASSWORD = os.environ.get("MY_PASSWORD")
 RECEIVER_EMAIL = "nguyenlevuong027@gmail.com"
 
-if not my_password:
-    print("Lỗi: Không tìm thấy mật khẩu trong biến môi trường!")
 
 message = f"""Subject: Hãy nhìn lên bầu trời, có một vì tinh tú tên ISS
 From: {SENDER_EMAIL}
