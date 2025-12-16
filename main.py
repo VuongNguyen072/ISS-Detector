@@ -54,7 +54,7 @@ def is_dark():
     return False
 
 
-if is_dark() and is_overhead():
+if true:
     try:
         # Kết nối tới server
         server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
