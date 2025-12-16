@@ -25,6 +25,6 @@ jobs:
 
       - name: Run ISS Tracker script
         env:
-          SENDER_EMAIL: ${{ secrets.MY_EMAIL }}
-          SENDER_PASSWORD: ${{ secrets.MY_PASSWORD }}
+          MY_EMAIL: ${{ secrets.MY_EMAIL }}
+          MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
         run: python main.py
