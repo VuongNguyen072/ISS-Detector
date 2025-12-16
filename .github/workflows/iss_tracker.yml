@@ -3,7 +3,7 @@ name: Check ISS Position
 on:
   schedule:
     # Cấu hình chạy mỗi 5 phút.
-    - cron: '*5 * * * *'
+    - cron: '*/5 * * * *'
   # Cho phép bạn bấm nút chạy thủ công để test
   workflow_dispatch:
 
