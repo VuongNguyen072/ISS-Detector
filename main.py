@@ -49,7 +49,7 @@ def is_dark():
 
     time_now = int(datetime.now(timezone.utc).hour)
 
-    if (sunset <= time_now) and (sunrise >= time_now):
+    if (sunset <= time_now) or (sunrise >= time_now):
         return True
     return False
 
